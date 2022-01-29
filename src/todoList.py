@@ -99,7 +99,7 @@ def update_item(key, text, checked, dynamodb=None):
     except ClientError as e:
         print(e.response['Error']['Message'])  # pragma: no cover
     else:
-        attributes=result['Attributes']
+        attributes = result['Attributes']
         return attributes
 
 
