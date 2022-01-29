@@ -35,7 +35,7 @@ def get_item(key, dynamodb=None):
     else:
         print('Result getItem:'+str(result))
         if 'Item' in result:
-            item=result['Item']
+            item = result['Item']
             return item
 
 
@@ -43,7 +43,7 @@ def get_items(dynamodb=None):
     table = get_table(dynamodb)
     # fetch todo from the database
     result = table.scan()
-    items=result['Items']
+    items = result['Items']
     return items
 
 
