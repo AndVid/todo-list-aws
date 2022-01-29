@@ -43,8 +43,7 @@ def get_items(dynamodb=None):
     table = get_table(dynamodb)
     # fetch todo from the database
     result = table.scan()
-    items=result['Items']
-    return items
+    return  result['Items']
 
 
 def put_item(text, dynamodb=None):
